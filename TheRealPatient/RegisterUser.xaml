@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="TheRealPatient.RegisterUser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TheRealPatient"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel Margin="10,10,10,10">
+            <StackPanel Name="ContentSP" HorizontalAlignment="Stretch" Orientation="Horizontal" Height="50"> 
+            <TextBlock Name="UserNameTB" Width="150" Height="35">UserName: </TextBlock>
+            <TextBox Name="userNameValue" Width="150" MaxLength="50" Height="35"></TextBox>
+                
+            </StackPanel>
+            <StackPanel Name="passwordSP" RelativePanel.Below="ContentSP" Orientation="Horizontal" Height="50">
+                <TextBlock Name="passwordTB" Width="150" Height="35">Password:</TextBlock>
+                <TextBox Name="PasswordValue" Width="150" MaxLength="50" Height="35"></TextBox>
+            </StackPanel>
+            <StackPanel Name="ButtonSP" Orientation="Horizontal" HorizontalAlignment="Stretch" RelativePanel.Below="passwordSP" Height="50">
+            <Button Name="registerUserButton" Content="Register" Margin="0,0,0,9" VerticalAlignment="Bottom" Click="registerUserButton_Click"></Button>
+        </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" RelativePanel.Below="ButtonSP" Height="50">
+                <TextBlock Name="ErrorBlock" Height="50"/>
+            </StackPanel>
+
+        </RelativePanel>
+    </Grid>
+</Page>
